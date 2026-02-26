@@ -1,0 +1,247 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 20em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.im-fell-dw-pica-sc-regular {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  color: black;
+  font-style: normal;
+}
+
+.im-fell-dw-pica-paragraph {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 40;
+  color: black;
+  font-style: normal;
+}
+
+.festive-regular {
+  font-family: "Festive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-dw-pica-regular-paragraph {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  font-style: normal;
+}
+
+.im-fell-dw-pica-regular-italic {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.opening-line-label {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  font-style: italic;
+}
+
+.opening-line-area {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  font-style: normal;
+  resize: none;
+  width: 400px;
+  height: 150px;
+  overflow-y: scroll;
+  border: 2px solid rgb(111, 22, 39);
+  background-color: transparent;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.opening-line-area:focus {
+  outline: none;
+  border-color: #4b0116aa;
+  background-color: #fff1e32e;
+}
+
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #710322aa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #710322aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.main_functioning {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  gap: 20px;
+}
+
+.prompt_select {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(157, 40, 61);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 500px;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid rgb(157, 40, 61);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 500px;
+  min-height: 400px;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.output-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.generate-button {
+  background-color: rgb(121, 25, 43);
+  color: white;
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  border: 2px solid rgb(111, 22, 39);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.generate-button:hover {
+  background-color: rgb(111, 22, 39);
+  border: 2px solid rgb(121, 25, 43);
+}
+
+.generate-button:active {
+  background-color: rgb(121, 25, 43);
+  border: 2px solid rgb(111, 22, 39);
+}
+
+.generate-button:focus {
+  outline: none;
+  border-color: #4b0116aa;
+}
+
+.length-slider {
+  width: 400px;
+  border: 2px solid rgb(111, 22, 39);
+  background-color: transparent;
+  accent-color: rgb(181, 128, 15);
+  color: transparent;
+}
+
+.generate-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  border-color: #333;
+}
+
+.error-message {
+  color: #710322;
+  font-family: "IM Fell DW Pica", serif;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.manuscript-text {
+  line-height: 1.6;
+  text-indent: 2em;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.scribe-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.quill {
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23710322'%3E%3Cpath d='M21.7 5.1c-.2-.2-.5-.3-.8-.3-.3 0-.5.1-.7.3L12.5 12.8l-1.4-1.4 7.7-7.7c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-7.7 7.7-1.4-1.4 7.7-7.7c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0L6.8 7.6c-.2-.2-.5-.3-.8-.3-.3 0-.5.1-.7.3l-5 5c-.4.4-.4 1 0 1.4.2.2.4.3.7.3.3 0 .5-.1.7-.3L6 10l1.4 1.4-4.3 4.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3.3 0 .5-.1.7-.3l4.3-4.3 1.4 1.4-4.3 4.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3.3 0 .5-.1.7-.3l5-5c.2-.2.3-.5.3-.8 0-.3-.1-.5-.3-.7L12.5 12.8l7.7-7.7c.2-.2.3-.5.3-.8 0-.3-.1-.6-.3-.8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: write 2s infinite ease-in-out;
+}
+
+@keyframes write {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(10px, -5px) rotate(10deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-10px, -5px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
