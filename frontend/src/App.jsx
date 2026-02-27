@@ -14,13 +14,14 @@ function App() {
 
   const generateClassicalProse = async (openingLine, wordCount) => {
     if (!openingLine.trim()) {
-      setError("Pray, provide an opening line for the scribe.");
+      setError("Pray, provide an opening line for the scribe."); /* This part is really corny but I couldn't come up with anything better */
       return;
     }
     setIsLoading(true);
     setError("");
     setOutput("");
     try {
+      /* Was initially running this locally but have since deployed it */
       const response = await fetch("http://localhost:5001/api/generate", {
         method: "POST",
         headers: {
