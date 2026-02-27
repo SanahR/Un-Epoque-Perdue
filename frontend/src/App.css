@@ -28,6 +28,7 @@
   font-style: normal;
 }
 
+/* Didn't end up using this much in the actual code, but it's always nice to have */
 .festive-regular {
   font-family: "Festive", cursive;
   font-weight: 400;
