@@ -33,7 +33,8 @@ function App() {
         }),
       });
 
-      if (!response.ok) throw new Error("The manuscript was lost in transit.");
+      /* Standard Error Handling */
+      if (!response.ok) throw new Error("The manuscript was lost in transit."); /* Another corny line that gets the point across */
 
       const data = await response.json();
       setOutput(data.text);
